@@ -14,12 +14,25 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      aro: 595
+      aro: 600
     }
+    this.changeAro = this.changeAro.bind(this)
   }
+
+  changeAro(e) {
+    this.setState({aro: e.target.value})
+  }
+
   render() {
     return(
-      <Slider />
+      <Slider
+        label='Average Reapir Order'
+        min={200}
+        max={2000}
+        step={20}
+        value={this.state.aro}
+        onChange={this.changeAro}
+      />
     )
   }
 }
