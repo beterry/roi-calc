@@ -24,6 +24,10 @@ export default function slider({
                 value={value}
                 onChange={(e) => onChange(e)}
             />
+            <div className='slider_range'>
+                <p>{min}</p>
+                <p>{max}</p>
+            </div>
         </div>
     )
 }
