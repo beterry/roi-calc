@@ -9,7 +9,34 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+//padding styles
+
+.padding-s{
+  margin-bottom: 1rem;
+}
+
+.padding-m{
+  margin-bottom: 2rem;
+}
+
+.roi_layout{
+  width: 90%;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+
 .calc-box{
   box-shadow: 0 0 1rem $gray-10;
-  margin: 1rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  p{
+    color: $gray-60;
+  }
+  h2{
+    font-size: 3rem;
+    color: $vivid;
+    font-weight: 700;
+    margin: .5rem 0;
+  }
 }

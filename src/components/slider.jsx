@@ -1,9 +1,11 @@
 import React from 'react'
+import numeral from 'numeral'
 
 export default function slider({
     label,
     min,
     max,
+    format,
     step,
     value,
     onChange
@@ -12,7 +14,7 @@ export default function slider({
         <div className='slider_wrapper'>
             <div className='slider_labels'>
                 <label htmlFor={label}>{label}</label>
-                <label htmlFor={label}>${value}</label>
+                <label htmlFor={label}>{numeral(value).format(format)}</label>
             </div>
             <input
                 type='range'
@@ -25,8 +27,8 @@ export default function slider({
                 onChange={(e) => onChange(e)}
             />
             <div className='slider_range'>
-                <p>{min}</p>
-                <p>{max}</p>
+                <p className='caption'>{numeral(min).format(format)}</p>
+                <p className='caption'>{numeral(max).format(format)}</p>
             </div>
         </div>
     )

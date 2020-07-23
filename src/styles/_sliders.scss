@@ -1,14 +1,31 @@
+@import '../styles/colors';
+
+.slider_wrapper{
+    margin-bottom: 1.5rem;
+}
+
 .slider_labels{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5rem;
+    label:first-child{
+        color: $gray-60;
+    }
+    label:last-child{
+        font-size: 2rem;
+        color: $vivid;
+        font-weight: 700;
+    }
 }
 
 .slider_range{
     display: flex;
     justify-content: space-between;
+    margin-top: calc(.75rem + 1px);
     p{
-        font-size: .75rem;
-        color: $gray-60;
+        color: $gray-40;
+        line-height: 0;
     }
 }
 

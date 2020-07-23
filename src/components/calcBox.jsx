@@ -6,8 +6,12 @@ export default function calcBox({
 }) {
     return (
         <div className='calc-box'>
-            <p>{mainTitle}</p>
-            <h2>{mainValue}</h2>
+            <div>
+                <p>{mainTitle}</p>
+                <h2>{mainValue}</h2>
+                <p className='caption'>For every $1.00 spent on direct mail you receive {mainValue} in revenue.</p>
+            </div>
+            
         </div>
     )
 }
