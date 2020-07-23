@@ -5,7 +5,7 @@ export default function slider({
     label,
     min,
     max,
-    format,
+    format='0',
     step,
     value,
     onChange
