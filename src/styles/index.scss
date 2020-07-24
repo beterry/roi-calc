@@ -101,7 +101,7 @@ nav{
 .hero{
   color: white;
   background: linear-gradient(180deg, $vivid 0%, $p 100%) 0% 0% no-repeat padding-box;
-  padding: calc(#{$navHeight} + #{$padding-m}) 0 calc(#{$padding-m} + #{$wave-height}) 0;
+  padding: calc(#{$navHeight} + #{$padding-l}) 0 calc(#{$padding-l} + #{$wave-height}) 0;
   position: relative;
   overflow: hidden;
   h2{
@@ -113,13 +113,44 @@ nav{
   }
 }
 
-#wave{
+.wave{
   position: absolute;
   bottom: 0;
   width: 100%;
   min-width: 1920px;
-  left: 50%;
-  transform: translate(-50%, 0);
+}
+
+#wave1{
+  animation: wave-right 50s linear infinite;
+  opacity: .3;
+}
+
+#wave2{
+  animation: wave-left 40s linear infinite;
+  opacity: .7;
+}
+
+#wave3{
+  animation: wave-right 60s linear infinite;
+  opacity: 1;
+}
+
+@keyframes wave-right{
+  0%{
+    right: 0;
+  }
+  100%{
+    right: -1920px;
+  }
+}
+
+@keyframes wave-left{
+  0%{
+    left: 100%;
+  }
+  100%{
+    left: -1920px;
+  }
 }
 
 .roi_section{

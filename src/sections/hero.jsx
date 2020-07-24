@@ -15,7 +15,9 @@ export default function hero() {
                 </div>
             </div>
 
-            <img id='wave' src={wave} alt='wave graphic' />
+            <img id='wave1' className='wave' src={wave} alt='wave graphic' />
+            <img id='wave2' className='wave' src={wave} alt='wave graphic' />
+            <img id='wave3' className='wave' src={wave} alt='wave graphic' />
 
         </section>
     )
