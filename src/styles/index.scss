@@ -2,6 +2,13 @@
 @import './colors';
 @import './sliders';
 
+//variables
+$navHeight: 3.5rem;
+$padding-xs: 1rem;
+$padding-s: 1.5rem;
+$padding-m: 3rem;
+$padding-l: 5rem;
+
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
@@ -9,27 +16,105 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-//padding styles
-
-.padding-s{
-  margin-bottom: 1rem;
+nav{
+  background: $p;
+  min-height: $navHeight;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  z-index: 99;
 }
 
-.padding-m{
-  margin-bottom: 2rem;
+
+
+//button styles
+
+@mixin button{
+  border: none;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .875rem;
+  letter-spacing: .7px;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
 }
 
-.roi_layout{
-  width: 90%;
-  max-width: 100rem;
-  margin: 0 auto;
+.button_icon{
+  @include button;
+  background: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
 }
 
+.button_contained{
+  @include button;
+  min-height: 2.25rem;
+  min-width: 4rem;
+  border-radius: .25rem;
+  padding: 0 1rem;
+  color: white;
+}
+
+.button_text{
+  @include button;
+  background: none;
+  min-height: 2.25rem;
+  min-width: 4rem;
+  border-radius: .25rem;
+  padding: 0 1rem;
+  color: $vivid;
+}
+
+.button_text:hover{
+  background: $v-20;
+}
+
+.nav_wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav_left{
+  display: flex;
+  align-items: center;
+  button:hover{
+    background: $vivid;
+  }
+}
+
+#logo{
+  margin-left: 1rem;
+}
+
+.hero{
+  color: white;
+  background: linear-gradient(180deg, $vivid 0%, $p 100%) 0% 0% no-repeat padding-box;
+  padding: calc(#{$navHeight} + #{$padding-m}) 0 $padding-m 0;
+  h2{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: $vivid;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+  }
+}
 
 .calc-box{
+  position: sticky;
+  position: -webkit-sticky;
+  top: calc(1rem + #{$navHeight});
+  background: white;
   box-shadow: 0 0 1rem $gray-10;
   padding: 1rem;
   margin-bottom: 2rem;
+  z-index: 1;
   p{
     color: $gray-60;
   }
@@ -39,4 +124,39 @@ body {
     font-weight: 700;
     margin: .5rem 0;
   }
+}
+
+#cta{
+  button{
+    display: inline-flex;
+  }
+  button:first-child{
+    margin-right: 1rem;
+  }
+}
+
+//layout styles
+
+.layout_margins{
+  width: 90%;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+//padding styles
+
+.padding-xs{
+  margin-bottom: $padding-xs;
+}
+
+.padding-s{
+  margin-bottom: $padding-s;
+}
+
+.padding-m{
+  margin-bottom: $padding-m;
+}
+
+.padding-l{
+  margin-bottom: $padding-l;
 }

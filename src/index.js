@@ -6,11 +6,12 @@ import './styles/normalize.css'
 import './styles/index.scss';
 
 //import sections
+import Hero from './sections/hero'
 import ShortROI from './sections/shortRoi'
 import LongROI from './sections/longRoi'
 
 //import components
-
+import TopBar from './components/topBar'
 
 class App extends Component {
   constructor(props) {
@@ -61,10 +62,12 @@ class App extends Component {
     this.setState({retention: e.target.value})
   }
 
-
   render() {
+
     return(
       <>
+        <TopBar />
+        <Hero />
         <ShortROI
           aro={this.state.aro}
           quantity={this.state.quantity}
@@ -86,6 +89,14 @@ class App extends Component {
           retention={this.state.retention}
           changeRetention={this.changeRetention}
         />
+        <section id='cta' className='layout_margins padding-l'>
+          <h3 className='padding-xs'>Start with no money down</h3>
+          <p className='padding-s'>We finance the cost of your mailing area analysis, mailing list, artwork, printing, postal sorting, and delivery. You don’t pay a dime until we pay the post office for your first week’s mailing.</p>
+          <div>
+            <button className='button_contained orange'>Sign up</button>
+            <button className='button_text'>Email me results</button>
+          </div>
+        </section>
       </>
     )
   }

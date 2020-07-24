@@ -15,11 +15,12 @@ export default function shortRoi({
 }) {
     const increasedCarCount = quantity * response
     const grossRevenue = increasedCarCount * aro
-    const cost = 2150
+    const cost = 1000 + (quantity * .25)
     const netRevenue = grossRevenue - cost
     const roi = (netRevenue / cost)
+
     return (
-        <section className='roi_layout'>
+        <section className='layout_margins padding-l'>
             <h2 className='padding-s'>Immediate ROI</h2>
             <p className='padding-m'>At Mail Shark, we define Immediate ROI as revenue earned through a 1-6+ month period after your last mailer was sent out. It’s important you remain patient and give your direct mail marketing time to work. </p>
             <CalcBox
@@ -30,7 +31,7 @@ export default function shortRoi({
                 label='Average Reapir Order'
                 min={200}
                 max={2000}
-                format='$0,0.00'
+                format='$0,0'
                 step={25}
                 value={aro}
                 onChange={changeAro}
@@ -53,6 +54,7 @@ export default function shortRoi({
                 value={response}
                 onChange={changeResponse}
             />
+            <p className='caption text-60'>A 0.5% is the targeted benchmark response rate. However, with the right creative, mailing list, CTA and strategy, this number can certainly be exceeded as well. You can get a lower response right such as ¼% and still have the campaign be quite successful based on the dollar amount repair orders and revenue generated.</p>
         </section>
     )
 }

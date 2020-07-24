@@ -23,12 +23,12 @@ export default function longRoi({
     const carsRetained = increasedCarCount * retention
     const ltv = (visits * aro * years) + (referrals * (visits * aro * years))
     const grossRevenue = ltv * carsRetained
-    const cost = 2150
+    const cost = 1000 + (quantity * .25)
     const netRevenue = grossRevenue - cost
     const roi = netRevenue / cost
 
     return (
-        <section className='roi_layout'>
+        <section className='layout_margins padding-l'>
             <h2 className='padding-s'>Lifetime ROI</h2>
             <p className='padding-m'>Throughout your shop’s lifetime, customers gained from a mailer earn you increased revenue as they keep coming back for years and refer your business to friends and family. By understanding the power of referrals and customer retention, we can calculate the enormous total lifetime revenue earned from a direct mail marketing campaign.</p>
             <CalcBox
