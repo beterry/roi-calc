@@ -1,5 +1,7 @@
 import React from 'react'
 
+import wave from '../images/wave.svg'
+
 export default function hero() {
     return (
         <section className='hero padding-l'>
@@ -12,6 +14,9 @@ export default function hero() {
                     <p>After crunching the numbers, we went ahead and pre-populated the fields below with industry averages. Please adjust the inputs to your shop’s numbers to see your most accurate potential ROI calculation.</p>
                 </div>
             </div>
+
+            <img id='wave' src={wave} alt='wave graphic' />
+
         </section>
     )
 }

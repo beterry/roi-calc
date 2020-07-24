@@ -4,10 +4,15 @@
 
 //variables
 $navHeight: 3.5rem;
+$wave-height: 75px; //1920px wide
 $padding-xs: 1rem;
 $padding-s: 1.5rem;
 $padding-m: 3rem;
 $padding-l: 5rem;
+
+*{
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -96,7 +101,9 @@ nav{
 .hero{
   color: white;
   background: linear-gradient(180deg, $vivid 0%, $p 100%) 0% 0% no-repeat padding-box;
-  padding: calc(#{$navHeight} + #{$padding-m}) 0 $padding-m 0;
+  padding: calc(#{$navHeight} + #{$padding-m}) 0 calc(#{$padding-m} + #{$wave-height}) 0;
+  position: relative;
+  overflow: hidden;
   h2{
     font-size: 1.2rem;
     font-weight: 400;
@@ -104,6 +111,19 @@ nav{
     text-transform: uppercase;
     letter-spacing: 2.4px;
   }
+}
+
+#wave{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-width: 1920px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.roi_section{
+  position: relative;
 }
 
 .calc-box{
@@ -124,6 +144,16 @@ nav{
     font-weight: 700;
     margin: .5rem 0;
   }
+  h3{
+    font-size: 2rem;
+    color: $vivid;
+    font-weight: 700;
+    margin: .5rem 0;
+  }
+}
+
+.calc-box__sub{
+  display: none;
 }
 
 #cta{
@@ -159,4 +189,28 @@ nav{
 
 .padding-l{
   margin-bottom: $padding-l;
+}
+
+//BREAK POINT 1024px
+// IPad Pro and larger
+@media screen and (min-width: 64rem){
+  .roi_left{
+    width: 47.5%;
+  }
+  .calc-box{
+    padding: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 47.5%;
+  }
+  .calc-box__sub{
+    display: flex;
+    margin-top: $padding-m;
+    div:first-child{
+      border-right: 1px solid $gray-10;
+      padding-right: 2rem;
+      margin-right: 2rem;
+    }
+  }
 }
