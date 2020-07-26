@@ -1,14 +1,7 @@
 @import './fonts';
 @import './colors';
-@import './sliders';
-
-//variables
-$navHeight: 3.5rem;
-$wave-height: 75px; //1920px wide
-$padding-xs: 1rem;
-$padding-s: 1.5rem;
-$padding-m: 3rem;
-$padding-l: 5rem;
+@import './layout';
+@import './buttons';
 
 *{
   box-sizing: border-box;
@@ -21,227 +14,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-nav{
-  background: $p;
-  min-height: $navHeight;
-  position: fixed;
-  display: flex;
-  align-items: center;
-  top: 0;
-  width: 100%;
-  z-index: 99;
-}
-
-
-
-//button styles
-
-@mixin button{
-  border: none;
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: .875rem;
-  letter-spacing: .7px;
-  text-transform: uppercase;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.button_icon{
-  @include button;
-  background: none;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-}
-
-.button_contained{
-  @include button;
-  min-height: 2.25rem;
-  min-width: 4rem;
-  border-radius: .25rem;
-  padding: 0 1rem;
-  color: white;
-}
-
-.button_text{
-  @include button;
-  background: none;
-  min-height: 2.25rem;
-  min-width: 4rem;
-  border-radius: .25rem;
-  padding: 0 1rem;
-  color: $vivid;
-}
-
-.button_text:hover{
-  background: $v-20;
-}
-
-.nav_wrapper{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav_left{
-  display: flex;
-  align-items: center;
-  button:hover{
-    background: $vivid;
-  }
-}
-
-#logo{
-  margin-left: 1rem;
-}
-
-.hero{
-  color: white;
-  background: linear-gradient(180deg, $vivid 0%, $p 100%) 0% 0% no-repeat padding-box;
-  padding: calc(#{$navHeight} + #{$padding-l}) 0 calc(#{$padding-l} + #{$wave-height}) 0;
-  position: relative;
-  overflow: hidden;
-  h2{
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: $vivid;
-    text-transform: uppercase;
-    letter-spacing: 2.4px;
-  }
-}
-
-.wave{
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  min-width: 1920px;
-}
-
-#wave1{
-  animation: wave-right 50s linear infinite;
-  opacity: .3;
-}
-
-#wave2{
-  animation: wave-left 40s linear infinite;
-  opacity: .7;
-}
-
-#wave3{
-  animation: wave-right 60s linear infinite;
-  opacity: 1;
-}
-
-@keyframes wave-right{
-  0%{
-    right: 0;
-  }
-  100%{
-    right: -1920px;
-  }
-}
-
-@keyframes wave-left{
-  0%{
-    left: 100%;
-  }
-  100%{
-    left: -1920px;
-  }
-}
-
-.roi_section{
-  position: relative;
-}
-
-.calc-box{
-  position: sticky;
-  position: -webkit-sticky;
-  top: calc(1rem + #{$navHeight});
-  background: white;
-  box-shadow: 0 0 1rem $gray-10;
-  padding: 1rem;
-  margin-bottom: 2rem;
-  z-index: 1;
-  p{
-    color: $gray-60;
-  }
-  h2{
-    font-size: 3rem;
-    color: $vivid;
-    font-weight: 700;
-    margin: .5rem 0;
-  }
-  h3{
-    font-size: 2rem;
-    color: $vivid;
-    font-weight: 700;
-    margin: .5rem 0;
-  }
-}
-
-.calc-box__sub{
-  display: none;
-}
-
 #cta{
+  @include margins;
+  h2{
+    margin-bottom: $padding-xs;
+  }
+  p{
+    margin-bottom: $padding-s;
+  }
   button{
     display: inline-flex;
   }
   button:first-child{
     margin-right: 1rem;
-  }
-}
-
-//layout styles
-
-.layout_margins{
-  width: 90%;
-  max-width: 100rem;
-  margin: 0 auto;
-}
-
-//padding styles
-
-.padding-xs{
-  margin-bottom: $padding-xs;
-}
-
-.padding-s{
-  margin-bottom: $padding-s;
-}
-
-.padding-m{
-  margin-bottom: $padding-m;
-}
-
-.padding-l{
-  margin-bottom: $padding-l;
-}
-
-//BREAK POINT 1024px
-// IPad Pro and larger
-@media screen and (min-width: 64rem){
-  .roi_left{
-    width: 47.5%;
-  }
-  .calc-box{
-    padding: 2rem;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 47.5%;
-  }
-  .calc-box__sub{
-    display: flex;
-    margin-top: $padding-m;
-    div:first-child{
-      border-right: 1px solid $gray-10;
-      padding-right: 2rem;
-      margin-right: 2rem;
-    }
   }
 }

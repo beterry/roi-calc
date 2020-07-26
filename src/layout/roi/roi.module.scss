@@ -1,0 +1,15 @@
+@import '../../styles/layout';
+
+.layout_roi{
+    @include margins;
+    position: relative;
+    h2{
+      margin-bottom: 1rem;
+    }
+  }
+
+@media screen and (min-width: 64rem){
+    .left{
+      width: 47.5%;
+    }
+}

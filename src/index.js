@@ -7,15 +7,16 @@ import './styles/normalize.css'
 import './styles/index.scss';
 
 //import sections
-import Hero from './sections/hero'
+import Hero from './sections/hero/hero'
 
 // import layout
-import RoiLayout from './layout/roi'
+import RoiLayout from './layout/roi/roi'
+import Padding from './layout/padding/padding'
 
 //import components
-import TopBar from './components/topBar'
-import Slider from './components/slider'
-import CalcBox from './components/calcBox'
+import TopBar from './components/topBar/topBar'
+import Slider from './components/roiSlider/slider'
+import CalcBox from './components/calcBox/calcBox'
 
 class App extends Component {
   constructor(props) {
@@ -87,8 +88,9 @@ class App extends Component {
       <>
         <TopBar />
         <Hero />
+        <Padding />
         <RoiLayout>
-          <h2 className='padding-s'>Immediate ROI</h2>
+          <h2>Immediate ROI</h2>
           <p className='padding-m'>At Mail Shark, we define Immediate ROI as revenue earned through a 1-6+ month period after your last mailer was sent out. It’s important you remain patient and give your direct mail marketing time to work. </p>
           <CalcBox
               mainTitle='Estimated Immediate ROI'
@@ -127,7 +129,7 @@ class App extends Component {
           />
           <p className='caption text-60'>A 0.5% is the targeted benchmark response rate. However, with the right creative, mailing list, CTA and strategy, this number can certainly be exceeded as well. You can get a lower response right such as ¼% and still have the campaign be quite successful based on the dollar amount repair orders and revenue generated.</p>
         </RoiLayout>
-          
+        <Padding />
         <RoiLayout>
           <h2 className='padding-s'>Lifetime ROI</h2>
           <p className='padding-m'>Throughout your shop’s lifetime, customers gained from a mailer earn you increased revenue as they keep coming back for years and refer your business to friends and family. By understanding the power of referrals and customer retention, we can calculate the enormous total lifetime revenue earned from a direct mail marketing campaign.</p>
@@ -173,19 +175,19 @@ class App extends Component {
               onChange={this.changeRetention}
           />
         </RoiLayout>
-
-        <section id='cta' className='layout_margins padding-l'>
-          <h2 className='padding-xs'>Start with no money down</h2>
-          <p className='padding-s'>We finance the cost of your mailing area analysis, mailing list, artwork, printing, postal sorting, and delivery. You don’t pay a dime until we pay the post office for your first week’s mailing.</p>
+        <Padding />
+        <section id='cta'>
+          <h2>Start with no money down</h2>
+          <p>We finance the cost of your mailing area analysis, mailing list, artwork, printing, postal sorting, and delivery. You don’t pay a dime until we pay the post office for your first week’s mailing.</p>
           <div>
             <button className='button_contained orange'>Sign up</button>
             <button className='button_text'>Email me results</button>
           </div>
         </section>
+        <Padding />
       </>
     )
   }
 }
-
 
 ReactDOM.render(<App />, document.getElementById('root'));

@@ -1,5 +1,7 @@
 import React from 'react'
 
+import styles from './calcBox.module.scss'
+
 export default function calcBox({
     mainTitle,
     mainValue,
@@ -9,13 +11,13 @@ export default function calcBox({
     rightValue
 }) {
     return (
-        <div className='calc-box'>
-            <div className='calc-box__main'>
+        <div className={styles.box}>
+            <div className={styles.main}>
                 <p>{mainTitle}</p>
                 <h2>{mainValue}</h2>
                 <p className='caption'>For every $1.00 spent on direct mail you receive {mainValue} in revenue.</p>
             </div>
-            <div className='calc-box__sub'>
+            <div className={styles.sub}>
                 <div>
                     <p>{leftTitle}</p>
                     <h3>{leftValue}</h3>

@@ -1,0 +1,32 @@
+@import '../../styles/layout';
+@import '../../styles/colors';
+
+.navbar{
+    background: $p;
+    min-height: $nav-height;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.inner{
+    @include margins;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    button:hover{
+        background: $vivid;
+    }
+}
+
+.logo{
+    margin-left: 1rem;
+}

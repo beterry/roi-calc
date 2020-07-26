@@ -1,0 +1,37 @@
+@import '../../styles/layout';
+
+.padding-xs{
+    height: $padding-xs;
+}
+
+.padding-s{
+    height: $padding-s;
+}
+
+.padding-m{
+    height: $padding-m;
+}
+
+.padding-l{
+    height: $padding-l;
+}
+
+.padding-xl{
+    height: $padding-xl;
+}
+
+.padding-section{
+    height: $padding-m;
+}
+
+@media screen and (min-width: 48rem){
+    .padding-section{
+        height: $padding-l;
+    }
+}
+
+@media screen and (min-width: 64rem){
+    .padding-section{
+        height: $padding-xl;
+    }
+}

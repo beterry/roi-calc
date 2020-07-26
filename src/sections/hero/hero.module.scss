@@ -1,0 +1,71 @@
+@import '../../styles/layout';
+@import '../../styles/colors';
+
+.hero{
+    color: white;
+    background: linear-gradient(180deg, $royal 0%, $p 100%) 0% 0% no-repeat padding-box;
+    padding: calc(#{$nav-height} + 2rem) 0 4.5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.inner{
+    @include margins;
+}
+
+.intro{
+    margin-bottom: $padding-m;
+    h1{
+        margin-bottom: $padding-xs;
+    }
+    h2{
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: $light-blue;
+        text-transform: uppercase;
+        letter-spacing: 2.4px;
+    }
+}
+
+.math{
+    h3{
+        margin-bottom: $padding-xs;
+    }
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 75px;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+    background-size: 50% auto;
+    animation: move_wave 20s linear infinite;
+}
+
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+
+@media screen and (min-width: 48rem){
+    .hero{
+        padding: calc(#{$nav-height} + 5rem) 0 7rem 0;
+    }
+}
+
+@media screen and (min-width: 64rem){
+    .hero{
+        padding: calc(#{$nav-height} + 6rem) 0 10rem 0;
+    }
+}

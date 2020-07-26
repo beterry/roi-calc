@@ -1,0 +1,51 @@
+@import '../../styles/colors';
+@import '../../styles/layout';
+
+.box{
+    position: sticky;
+    position: -webkit-sticky;
+    top: calc(1rem + #{$nav-height});
+    background: white;
+    box-shadow: 0 0 1rem $gray-10;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    z-index: 1;
+    p{
+      color: $gray-60;
+    }
+    h2{
+      font-size: 3rem;
+      color: $vivid;
+      font-weight: 700;
+      margin: .5rem 0;
+    }
+    h3{
+      font-size: 2rem;
+      color: $vivid;
+      font-weight: 700;
+      margin: .5rem 0;
+    }
+  }
+  
+  .sub{
+    display: none;
+  }
+
+  @media screen and (min-width: 64rem){
+    .box{
+      padding: 2rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 47.5%;
+    }
+    .sub{
+      display: flex;
+      margin-top: $padding-m;
+      div:first-child{
+        border-right: 1px solid $gray-10;
+        padding-right: 2rem;
+        margin-right: 2rem;
+      }
+    }
+  }

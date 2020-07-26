@@ -1,0 +1,18 @@
+$nav-height: 3.5rem;
+$wave-height: 75px; //1920px wide
+
+$padding-xs: 1rem;
+$padding-s: 1.5rem;
+$padding-m: 3rem;
+$padding-l: 5rem;
+$padding-xl: 6.25rem;
+
+@mixin margins {
+    width: 90%;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+.padding-m{
+    margin-bottom: $padding-m;
+}
