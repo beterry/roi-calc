@@ -11,11 +11,56 @@ export default class topBar extends Component {
             <nav className={styles.navbar}>
                 <div className={styles.inner}>
                     <div className={styles.left}>
-                        <button id='menu' className='button_icon'><img src={menuIcon} alt='menu' /></button>
+                        <button className='button_icon'><img src={menuIcon} alt='menu' /></button>
                         <img className={styles.logo} src={logo} alt='Mail Shark logo' />
+                        <ul className={styles.links}>
+                            <li>
+                                <a
+                                    href='https://www.themailshark.com/about/'
+                                    target='_blank'
+                                    rel="noopener noreferrer"
+                                >
+                                    About Us
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href='https://www.themailshark.com/products/'
+                                    target='_blank'
+                                    rel="noopener noreferrer"
+                                >
+                                    Products & Pricing
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href='https://www.themailshark.com/direct-mailing-services/'
+                                    target='_blank'
+                                    rel="noopener noreferrer"
+                                >
+                                    Direct Mail Services
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href='https://www.themailshark.com/resources/'
+                                    target='_blank'
+                                    rel="noopener noreferrer"
+                                >
+                                    Resources
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                     <div className={styles.right}>
-                        <button className='button_contained vivid'>Sign up</button>
+                        <a
+                            href='https://www.themailshark.net/logon.aspx?ReturnUrl=%2f'
+                            target='_blank'
+                            rel="noopener noreferrer"
+                        >
+                            Log in
+                        </a>
+                        <button className='button_contained vivid'>Get a quote</button>
                     </div>
                 </div>
                 

@@ -9,7 +9,11 @@
     align-items: center;
     top: 0;
     width: 100%;
-    z-index: 99;
+    z-index: 999;
+    a{
+        font-size: .875rem;
+        color: white;
+    }
 }
 
 .inner{
@@ -27,6 +31,42 @@
     }
 }
 
+.right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a{
+        display: none;
+    }
+}
+
+.links{
+    display: none;
+}
+
 .logo{
     margin-left: 1rem;
+}
+
+@media screen and (min-width: 64rem){
+    .left{
+        button{
+            display: none;
+        }
+    }
+   .links{
+        display: flex;
+        color: white;
+        margin-left: 2.5rem;
+        
+        li{
+            margin-right: 2rem;
+        }
+   }
+   .right{
+       a{
+           display: block;
+           margin-right: 1.5rem;
+       }
+   }
 }
