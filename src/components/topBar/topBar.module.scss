@@ -9,9 +9,16 @@
     align-items: center;
     top: 0;
     width: 100%;
+    box-shadow: 0 2px 3px $gray-20;
     z-index: 999;
     a{
+        display: flex;
+        align-items: center;
         color: white;
+        min-height: $nav-height;
+    }
+    a:hover{
+        color: $vivid;
     }
 }
 
@@ -25,8 +32,11 @@
 .left{
     display: flex;
     align-items: center;
+    button{
+        color: white;
+    }
     button:hover{
-        background: $vivid;
+        background: $v-20;
     }
 }
 
@@ -47,24 +57,54 @@
     margin-left: 1rem;
 }
 
+.dropdown{
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.dropdown_content{
+    display: none;
+    position: absolute;
+    background: white;
+    left: -1rem;
+    top: 90%;
+    padding: .5rem 0;
+    min-width: 12rem;
+    border-radius: .25rem;
+    box-shadow: 2px 3px 4px $gray-20;
+    a{
+        color: black;
+        min-height: auto;
+        padding: .5rem 1rem;
+    }
+    a:hover{
+        background: $v-20;
+    }
+}
+
+.dropdown:hover {
+    color: $vivid;
+    .dropdown_content{
+        display: block;
+    }
+}
+
 @media screen and (min-width: 64rem){
-    .left{
-        button{
-            display: none;
-        }
+    .menu{
+        display: none;
     }
    .links{
         display: flex;
-        color: white;
         margin-left: 2.5rem;
-        
-        li{
-            margin-right: 2rem;
-        }
+   }
+   .links > * {
+       margin-right: 2rem;
    }
    .right{
        a{
-           display: block;
+           display: flex;
            margin-right: 1.5rem;
        }
    }
