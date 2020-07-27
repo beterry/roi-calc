@@ -8,6 +8,7 @@ import './styles/index.scss';
 
 //import sections
 import Hero from './sections/hero/hero'
+import Footer from './sections/footer/footer'
 
 // import layout
 import RoiLayout from './layout/roi/roi'
@@ -91,7 +92,8 @@ class App extends Component {
         <Padding />
         <RoiLayout>
           <h2>Immediate ROI</h2>
-          <p className='padding-m'>At Mail Shark, we define Immediate ROI as revenue earned through a 1-6+ month period after your last mailer was sent out. It’s important you remain patient and give your direct mail marketing time to work. </p>
+          <p>At Mail Shark, we define Immediate ROI as revenue earned through a 1-6+ month period after your last mailer was sent out. It’s important you remain patient and give your direct mail marketing time to work. </p>
+          <Padding size='s' />
           <CalcBox
               mainTitle='Estimated Immediate ROI'
               mainValue={numeral(shortRoi).format('$0,0.00')}
@@ -133,6 +135,7 @@ class App extends Component {
         <RoiLayout>
           <h2 className='padding-s'>Lifetime ROI</h2>
           <p className='padding-m'>Throughout your shop’s lifetime, customers gained from a mailer earn you increased revenue as they keep coming back for years and refer your business to friends and family. By understanding the power of referrals and customer retention, we can calculate the enormous total lifetime revenue earned from a direct mail marketing campaign.</p>
+          <Padding size='s' />
           <CalcBox
               mainTitle='Estimated Lifetime ROI'
               mainValue={numeral(longRoi).format('$0,0.00')}
@@ -185,6 +188,7 @@ class App extends Component {
           </div>
         </section>
         <Padding />
+        <Footer />
       </>
     )
   }

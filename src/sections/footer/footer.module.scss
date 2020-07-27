@@ -1,0 +1,82 @@
+@import '../../styles/colors';
+@import '../../styles/layout';
+
+.footer{
+    background: $p;
+    color: white;
+    a{
+        color: white;
+    }
+}
+
+.inner{
+    @include margins;
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3rem;
+    h5{
+        margin-bottom: $padding-xs;
+    }
+    li{
+        margin-bottom: .5rem;
+    }
+}
+
+.contact{
+    margin-right: 2rem;
+    flex-shrink: 0;
+    p{
+        margin-top: 1rem;
+    }
+    a{
+        font-size: 1rem;
+    }
+}
+
+.social{
+    display: flex;
+    a:hover{
+        background: $v-20;
+    }
+    a:first-child{
+        margin-right: .25rem;
+    }
+}
+
+.copyright{
+    margin-top: $padding-m;
+    opacity: .6;
+    p{
+        text-align: center;
+        margin: 0 auto;
+    }
+    a{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 64rem){
+    .grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 40rem){
+    .inner{
+        flex-wrap: wrap;
+    }
+    .social{
+        order: 2;
+    }
+    .grid{
+        margin-top: $padding-m;
+        width: 100%;
+        order: 3;
+        gap: 2rem;
+    }
+}

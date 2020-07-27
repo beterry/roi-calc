@@ -26,8 +26,24 @@ h3{
     font-weight: 900;
 }
 
+h4{
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
+h5{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
 .caption{
     font-size: .75rem;
     line-height: 1rem;
     color: $gray-50;
+}
+
+a{
+    font-size: .875rem;
 }
