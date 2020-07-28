@@ -134,18 +134,50 @@ const NavDrawer = ({isOpen}) => (
 export default class topBar extends Component {
     constructor(props){
         super(props)
-        this.state = {drawerOpen: false}
+        this.state = {
+            drawerOpen: false,
+            goingUp: true,
+            currentPos: 0
+        }
         this.toggleDrawer = this.toggleDrawer.bind(this)
+        this.handleScroll = this.handleScroll.bind(this)
     }
 
     toggleDrawer() {
         this.setState({drawerOpen: !this.state.drawerOpen})
     }
 
+    handleScroll() {
+        if (window.scrollY <= 5) {
+            this.setState({
+                currentPos: window.scrollY,
+                goingUp: true
+            })
+        } else if(window.scrollY > this.state.currentPos){
+            this.setState({
+                currentPos: window.scrollY,
+                goingUp: false
+            })
+        } else {
+            this.setState({
+                currentPos: window.scrollY,
+                goingUp: true
+            })
+        }
+    }
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll)
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll)
+    }
+
     render() {
         return (
             <>
-                <nav className={styles.navbar}>
+                <nav className={`${styles.navbar} ${this.state.goingUp ? styles.visible : styles.hidden}`}>
                     <div className={styles.inner}>
                         <div className={styles.left}>
                             <button
