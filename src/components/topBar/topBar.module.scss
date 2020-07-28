@@ -110,18 +110,15 @@
     top: 0;
     background: $p;
     width: $drawer-width;
+    max-width: $max-drawer-width;
     height: 100vh;
-    padding: 2rem 1rem;
+    padding: 2rem;
     overflow: scroll;
     transition: left .2s;
     display: flex;
     flex-direction: column;
     a{
-        display: block;
         color: white;
-    }
-    button{
-        width: 100%;
     }
 }
 
@@ -133,29 +130,52 @@
 
 .drawer_closed{
     @include drawer();
-    left: -$drawer-width;
+    left: -$max-drawer-width;
 }
 
 .drawer_links{
-    margin-bottom: $padding-xs;
     a{
-        padding: .5rem 0 .5rem 2.5rem;
-        border-radius: .25rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+        min-height: 3rem;
     }
-    a:first-child{
+}
+
+.drawer_link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $v-20;
+    a{
         font-size: 1rem;
         font-weight: 700;
-        padding-left: 1rem;
     }
-    a:hover{
+    button{  
+        color: white;
+    }
+    button:hover {
         background: $v-20;
     }
 }
 
-.drawer_logo{
+.drawer_dropdown{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    a{
+        border-bottom: 1px solid $v-20;
+        padding-left: 1.5rem;
+    }
+}
+
+.drawer_logo{
+    width: 100%;
+    max-width: 10rem;
     margin-bottom: $padding-s;
+    img{
+        width: 100%;
+    }
 }
 
 .drawer_login{
@@ -164,17 +184,7 @@
     flex-direction: column;
     justify-content: flex-end;
     a{
-        padding: .5rem 0 .5rem 2.5rem;
-        border-radius: .25rem;
-        margin-bottom: $padding-xs;
-    }
-    a:first-child{
-        font-size: 1rem;
-        font-weight: 700;
-        padding-left: 1rem;
-    }
-    a:hover{
-        background: $v-20;
+        margin: $padding-xs 0;
     }
 }
 
@@ -197,8 +207,7 @@
             display: flex;
             align-items: center;
             color: white;
-            min-height: $nav-height;
-            margin-right: 1.5rem;
+            margin-right: .5rem;
         }
    }
    .underlay{
@@ -207,4 +216,10 @@
    .drawer_open, .drawer_closed{
        display: none;
    }
+}
+
+@media screen and (max-width: 25rem){
+    .right{
+        display: none;
+    }
 }
