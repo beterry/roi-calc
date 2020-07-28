@@ -4,8 +4,12 @@
 .footer{
     background: $p;
     color: white;
+    padding: 4rem 0 $padding-s 0;
     a{
         color: white;
+    }
+    a:hover{
+        color: $vivid;
     }
 }
 
@@ -49,7 +53,7 @@
 }
 
 .copyright{
-    margin-top: $padding-m;
+    margin-top: 4rem;
     opacity: .6;
     p{
         text-align: center;

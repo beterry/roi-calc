@@ -188,6 +188,10 @@
     }
 }
 
+.flipped{
+    transform: rotate(180deg);
+}
+
 @media screen and (min-width: 64rem){
     .menu{
         display: none;

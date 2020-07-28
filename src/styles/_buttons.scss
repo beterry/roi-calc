@@ -19,6 +19,7 @@
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
+    transition: transform .35s;
   }
   
   .button_contained{
@@ -28,6 +29,10 @@
     border-radius: .25rem;
     padding: 0 1rem;
     color: white;
+  }
+
+  .button_contained:hover{
+    filter: brightness(120%);
   }
   
   .button_text{

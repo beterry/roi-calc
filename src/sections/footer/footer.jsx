@@ -7,10 +7,6 @@ import styles from './footer.module.scss'
 import logo from '../../images/logo.svg'
 import insta from '../../images/insta.svg'
 import facebook from '../../images/fb.svg'
-import wave from '../../images/wave-footer.svg'
-
-//import components
-import Padding from '../../layout/padding/padding'
 
 const Link = ({label, link}) => (
     <li>
@@ -24,10 +20,16 @@ const Link = ({label, link}) => (
     </li>
 )
 
+const LinkList = ({label, link, children}) => (
+    <ul>
+        <a href={link}><h5>{label}</h5></a>
+        {children}
+    </ul>
+)
+
 export default function footer() {
     return (
         <footer className={styles.footer}>
-            <Padding />
             <div className={styles.inner}>
                 <div className={styles.contact}>
                     <img src={logo} alt='Mail Shark logo' />
@@ -35,39 +37,35 @@ export default function footer() {
                     <p>4125 New Holland Rd<br />Mohnton, PA 19540</p>
                 </div>
                 <div className={styles.grid}>
-                    <ul>
-                        <h5>About</h5>
-                        <Link label='Meet the Team' link='themailshark.com' />
-                        <Link label='Case Studies' link='themailshark.com' />
-                        <Link label='Careers' link='themailshark.com' />
-                        <Link label='Contact Us' link='themailshark.com' />
-                    </ul>
-                    <ul>
-                        <h5>Products & Pricing</h5>
-                        <Link label='Postcards' link='themailshark.com' />
-                        <Link label='Postcard Magnets' link='themailshark.com' />
-                        <Link label='Scratch-Off Postcards' link='themailshark.com' />
-                        <Link label='Plastic Postcards' link='themailshark.com' />
-                        <Link label='Menus' link='themailshark.com' />
-                        <Link label='Brochures' link='themailshark.com' />
-                        <Link label='Letters' link='themailshark.com' />
-                    </ul>
-                    <ul>
-                        <h5>Direct Mail Services</h5>
-                        <Link label='Our Strategy' link='themailshark.com' />
-                        <Link label='Targeted Mailing Lists' link='themailshark.com' />
-                        <Link label='Saturation Mailing Lists' link='themailshark.com' />
-                        <Link label='Every Door Direct Mail' link='themailshark.com' />
-                        <Link label='Direct Mail Printing' link='themailshark.com' />
-                    </ul>
-                    <ul>
-                        <h5>Resources</h5>
-                        <Link label='Blog' link='themailshark.com' />
-                        <Link label='Articles' link='themailshark.com' />
-                        <Link label='Guides' link='themailshark.com' />
-                        <Link label='Calcualtors' link='themailshark.com' />
-                        <Link label='FAQs' link='themailshark.com' />
-                    </ul>
+                    <LinkList label='About' link='https://www.themailshark.com/about/'>
+                        <Link label='Meet the Team' link='https://www.themailshark.com/about/team/' />
+                        <Link label='Case Studies' link='https://www.themailshark.com/about/case-studies/' />
+                        <Link label='Careers' link='https://www.themailshark.com/about/careers/' />
+                        <Link label='Contact Us' link='https://www.themailshark.com/contact-us/' />
+                    </LinkList>
+                    <LinkList label='Products & Pricing' link='https://www.themailshark.com/products/'>
+                        <Link label='Postcards' link='https://www.themailshark.com/products/postcards/' />
+                        <Link label='Postcard Magnets' link='https://www.themailshark.com/products/postcard-magnets/' />
+                        <Link label='Scratch-Off Postcards' link='https://www.themailshark.com/products/scratch-off-postcards/' />
+                        <Link label='Plastic Postcards' link='https://www.themailshark.com/products/plastic-postcards/' />
+                        <Link label='Menus' link='https://www.themailshark.com/products/menus/' />
+                        <Link label='Brochures' link='https://www.themailshark.com/products/brochures/' />
+                        <Link label='Letters' link='https://www.themailshark.com/products/letters/' />
+                    </LinkList>
+                    <LinkList label='Direct Mail Services' link='https://www.themailshark.com/direct-mailing-services/'>
+                        <Link label='Our Strategy' link='https://www.themailshark.com/our-strategy/' />
+                        <Link label='Mailing Lists' link='https://www.themailshark.com/direct-mailing-services/mailing-lists/' />
+                        <Link label='Every Door Direct Mail®' link='https://www.themailshark.com/direct-mailing-services/every-door-direct-mail/' />
+                        <Link label='Design' link='https://www.themailshark.com/design-services/' />
+                        <Link label='Print' link='https://www.themailshark.com/printing-services/' />
+                    </LinkList>
+                    <LinkList label='Resources' link='https://www.themailshark.com/resources/'>
+                        <Link label='Blog' link='https://www.themailshark.com/type/blog/' />
+                        <Link label='Articles' link='https://www.themailshark.com/type/articles/' />
+                        <Link label='Guides' link='https://www.themailshark.com/type/guides/' />
+                        <Link label='Calculators' link='https://www.themailshark.com/type/calculators/' />
+                        <Link label='FAQs' link='https://www.themailshark.com/faq/' />
+                    </LinkList>
                 </div>
                 <div className={styles.social}>
                     <a
@@ -91,8 +89,6 @@ export default function footer() {
             <div className={styles.copyright}>
                 <p>Mail Shark © 2020. All rights reserved | <a href='https://www.themailshark.com/privacy-policy/'>Privacy Policy</a></p>
             </div>
-            <Padding size='m' />
-            <div className={styles.wave} styles={{backgroundImage: `url('${wave}')`}}/>
         </footer>
     )
 }

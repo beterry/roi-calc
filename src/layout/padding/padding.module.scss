@@ -24,7 +24,7 @@
     height: $padding-m;
 }
 
-@media screen and (min-width: 48rem){
+@media screen and (min-height: 36rem){
     .padding-section{
         height: $padding-l;
     }

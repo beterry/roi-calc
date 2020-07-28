@@ -4,7 +4,7 @@
 .hero{
     color: white;
     background: linear-gradient(180deg, $royal 0%, $p 100%) 0% 0% no-repeat padding-box;
-    padding: calc(#{$nav-height} + #{$padding-m}) 0 calc(1.5rem + #{$padding-m}) 0;
+    padding: calc(#{$nav-height} + #{$padding-l}) 0 calc(1.5rem + #{$padding-l}) 0;
     position: relative;
     overflow: hidden;
 }
@@ -23,10 +23,10 @@
         transform: translateY(0) rotate(23deg)
     }
     25% {
-        transform: translateY(-.5rem) rotate(23deg)
+        transform: translateY(-.75rem) rotate(23deg)
     }
     75% {
-        transform: translateY(.5rem) rotate(23deg)
+        transform: translateY(.75rem) rotate(23deg)
     }
     100% {
         transform: translateY(0) rotate(23deg)
@@ -89,7 +89,7 @@
         justify-content: center;
         align-items: center;
         img{
-            animation: move_calc 10s linear infinite;
+            animation: move_calc 8s linear infinite;
         }
     }
     .left{

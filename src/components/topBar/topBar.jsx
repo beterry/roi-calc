@@ -35,7 +35,7 @@ const TopLinks = () => (
         <DropdownMenu label='Direct Mail Services' link='https://www.themailshark.com/direct-mailing-services/'>
             <NavLink label='Our Strategy' link='https://www.themailshark.com/our-strategy/' />
             <NavLink label='Mailing Lists' link='https://www.themailshark.com/direct-mailing-services/mailing-lists/' />
-            <NavLink label='Every Door Direct Mail' link='https://www.themailshark.com/direct-mailing-services/every-door-direct-mail/' />
+            <NavLink label='Every Door Direct Mail®' link='https://www.themailshark.com/direct-mailing-services/every-door-direct-mail/' />
             <NavLink label='Design' link='https://www.themailshark.com/design-services/' />
             <NavLink label='Print' link='https://www.themailshark.com/printing-services/' />
         </DropdownMenu>
@@ -59,7 +59,10 @@ class DrawerDropdown extends Component{
             <>
             <div className={styles.drawer_link}>
                 <a href={this.props.link}>{this.props.label}</a>
-                <button className='button_icon' onClick={this.toggleOpen}>
+                <button
+                    className={`button_icon ${this.state.isOpen ? styles.flipped : null}`}
+                    onClick={this.toggleOpen}
+                >
                     <MdArrowDropDown size='1.5rem'/>
                 </button>
             </div>

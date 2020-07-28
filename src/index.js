@@ -177,6 +177,7 @@ class App extends Component {
               value={this.state.retention}
               onChange={this.changeRetention}
           />
+          <p className='caption'>What % of your customers remain customers after their first visit?</p>
         </RoiLayout>
         <Padding />
         <section id='cta'>
