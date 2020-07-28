@@ -5,6 +5,7 @@ import styles from './hero.module.scss'
 
 //import images
 import wave from '../../images/wave.svg'
+import calc from '../../images/calc.svg'
 
 export default function hero() {
     return (
@@ -20,6 +21,9 @@ export default function hero() {
                         <h3>We did the math</h3>
                         <p>After crunching the numbers, we went ahead and pre-populated the fields below with industry averages. Please adjust the inputs to your shop’s numbers to see your most accurate potential ROI calculation.</p>
                     </div>
+                </div>
+                <div className={styles.right}>
+                    <img src={calc} alt='calculator' />
                 </div>
             </div>
 

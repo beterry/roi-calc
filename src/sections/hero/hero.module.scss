@@ -4,13 +4,33 @@
 .hero{
     color: white;
     background: linear-gradient(180deg, $royal 0%, $p 100%) 0% 0% no-repeat padding-box;
-    padding: calc(#{$nav-height} + 2rem) 0 4.5rem 0;
+    padding: calc(#{$nav-height} + #{$padding-m}) 0 calc(1.5rem + #{$padding-m}) 0;
     position: relative;
     overflow: hidden;
 }
 
 .inner{
     @include margins;
+    display: flex;
+}
+
+.right{
+    display: none;
+}
+
+@keyframes move_calc {
+    0% {
+        transform: translateY(0) rotate(23deg)
+    }
+    25% {
+        transform: translateY(-.5rem) rotate(23deg)
+    }
+    75% {
+        transform: translateY(.5rem) rotate(23deg)
+    }
+    100% {
+        transform: translateY(0) rotate(23deg)
+    }
 }
 
 .intro{
@@ -61,6 +81,20 @@
 @media screen and (min-width: 48rem){
     .hero{
         padding: calc(#{$nav-height} + 5rem) 0 7rem 0;
+    }
+    .right{
+        position: relative;
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            animation: move_calc 10s linear infinite;
+        }
+    }
+    .left{
+        min-width: 30rem;
+        margin-right: $padding-l;
     }
 }
 

@@ -131,7 +131,7 @@ const NavDrawer = ({isOpen}) => (
 export default class topBar extends Component {
     constructor(props){
         super(props)
-        this.state = {drawerOpen: true}
+        this.state = {drawerOpen: false}
         this.toggleDrawer = this.toggleDrawer.bind(this)
     }
 
