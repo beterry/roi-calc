@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
     label:first-child{
         color: $gray-60;
         margin-right: 2rem;
@@ -20,29 +20,57 @@
 .range{
     display: flex;
     justify-content: space-between;
-    margin-top: calc(.75rem + 1px);
+    margin-top: .5rem;
     p{
         color: $gray-40;
         line-height: 0;
     }
 }
 
+.slider_wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+@mixin rail {
+    height: 2px; /* Specified height */
+    border-radius: .1rem;
+    position: absolute;
+}
+
+.rail_before{
+    @include rail;
+    background: $vivid; /* Grey background */
+    left: 0;
+}
+
+.rail_after{
+    @include rail;
+    background: $gray-20;
+    right: 0;
+}
+
 @mixin track {
     width: 100%; /* Full-width */
-    height: .2rem; /* Specified height */
+    height: 1.5rem; /* Specified height */
     border-radius: .1rem;
-    background: $gray-20; /* Grey background */
+    appearance: none;
     outline: none; /* Remove outline */
+    cursor: pointer;
+    z-index: 1;
 }
 
 @mixin thumb {
     width: 1.5rem; /* Set a specific slider handle width */
     height: 1.5rem; /* Slider handle height */
+    position: relative;
     background: white;
     border: 2px solid $vivid;
     border-radius: 50%;
-    margin-top: calc(-.75rem + 1px);
+    // margin-top: calc(-.75rem + 1px);
     cursor: pointer; /* Cursor on hover */
+    z-index: 1;
 }
 
 
@@ -53,6 +81,8 @@
     input[type=range] {
         -webkit-appearance: none;  /* Override default CSS styles */
         width: 100%;
+        display: flex;
+        align-items: center;
     }
 
     input[type=range]::-webkit-slider-runnable-track {
