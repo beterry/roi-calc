@@ -19,21 +19,6 @@
     display: none;
 }
 
-@keyframes move_calc {
-    0% {
-        transform: translateY(0) rotate(23deg)
-    }
-    25% {
-        transform: translateY(-.75rem) rotate(23deg)
-    }
-    75% {
-        transform: translateY(.75rem) rotate(23deg)
-    }
-    100% {
-        transform: translateY(0) rotate(23deg)
-    }
-}
-
 .intro{
     margin-bottom: $padding-m;
     h1{
@@ -65,17 +50,31 @@
     transform-origin: center bottom;
     background-size: 50% auto;
     animation: move_wave 20s linear infinite;
+    animation-delay: 0s;
+    -webkit-animation: move_wave 20s linear infinite;
 }
 
 @keyframes move_wave {
     0% {
-        transform: translateX(0) translateZ(0) scaleY(1)
+        transform: translateX(0) translateZ(0) scaleY(1);
     }
     50% {
-        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+        transform: translateX(-25%) translateZ(0) scaleY(0.55);
     }
     100% {
-        transform: translateX(-50%) translateZ(0) scaleY(1)
+        transform: translateX(-50%) translateZ(0) scaleY(1);
+    }
+}
+
+@-webkit-keyframes move_wave {
+    from {
+        -webkit-transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        -webkit-transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    to {
+        -webkit-transform: translateX(-50%) translateZ(0) scaleY(1)
     }
 }
 
@@ -91,6 +90,7 @@
         align-items: center;
         img{
             animation: move_calc 8s linear infinite;
+            -webkit-animation: move_calc 8s linear infinite;
         }
     }
     .left{
@@ -102,5 +102,35 @@
 @media screen and (min-width: 64rem){
     .hero{
         padding: calc(#{$nav-height} + 6rem) 0 10rem 0;
+    }
+}
+
+@keyframes move_calc {
+    0% {
+        transform: translateY(0) rotate(23deg)
+    }
+    25% {
+        transform: translateY(-.75rem) rotate(23deg)
+    }
+    75% {
+        transform: translateY(.75rem) rotate(23deg)
+    }
+    100% {
+        transform: translateY(0) rotate(23deg)
+    }
+}
+
+@-webkit-keyframes move_calc {
+    0% {
+        transform: translateY(0) rotate(23deg)
+    }
+    25% {
+        transform: translateY(-.75rem) rotate(23deg)
+    }
+    75% {
+        transform: translateY(.75rem) rotate(23deg)
+    }
+    100% {
+        transform: translateY(0) rotate(23deg)
     }
 }
