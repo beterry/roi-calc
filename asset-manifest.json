@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/roi-calc/static/css/main.1be3ace7.chunk.css",
+    "main.js": "/roi-calc/static/js/main.c2e0713d.chunk.js",
+    "main.js.map": "/roi-calc/static/js/main.c2e0713d.chunk.js.map",
+    "runtime-main.js": "/roi-calc/static/js/runtime-main.e6be1827.js",
+    "runtime-main.js.map": "/roi-calc/static/js/runtime-main.e6be1827.js.map",
+    "static/js/2.6a872b8a.chunk.js": "/roi-calc/static/js/2.6a872b8a.chunk.js",
+    "static/js/2.6a872b8a.chunk.js.map": "/roi-calc/static/js/2.6a872b8a.chunk.js.map",
+    "index.html": "/roi-calc/index.html",
+    "precache-manifest.a36edbf508c31b7f133e7b2790aa85b3.js": "/roi-calc/precache-manifest.a36edbf508c31b7f133e7b2790aa85b3.js",
+    "service-worker.js": "/roi-calc/service-worker.js",
+    "static/css/main.1be3ace7.chunk.css.map": "/roi-calc/static/css/main.1be3ace7.chunk.css.map",
+    "static/js/2.6a872b8a.chunk.js.LICENSE.txt": "/roi-calc/static/js/2.6a872b8a.chunk.js.LICENSE.txt",
+    "static/media/calc.svg": "/roi-calc/static/media/calc.8643f387.svg",
+    "static/media/fb.svg": "/roi-calc/static/media/fb.75455e39.svg",
+    "static/media/insta.svg": "/roi-calc/static/media/insta.cd74d5b0.svg",
+    "static/media/logo.svg": "/roi-calc/static/media/logo.8a82317b.svg",
+    "static/media/wave.svg": "/roi-calc/static/media/wave.2b5cad9f.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e6be1827.js",
+    "static/js/2.6a872b8a.chunk.js",
+    "static/css/main.1be3ace7.chunk.css",
+    "static/js/main.c2e0713d.chunk.js"
+  ]
+}
