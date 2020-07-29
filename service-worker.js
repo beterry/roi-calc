@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/roi-calc/precache-manifest.a36edbf508c31b7f133e7b2790aa85b3.js"
+  "/roi-calc/precache-manifest.07b45b8dd5a961f2675a33fcda3b309b.js"
 );
 
 self.addEventListener('message', (event) => {
