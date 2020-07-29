@@ -20,6 +20,9 @@
     height: 2.5rem;
     border-radius: 50%;
     transition: transform .35s;
+    svg{
+      flex-shrink: 0;
+    }
   }
   
   .button_contained{
