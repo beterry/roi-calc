@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/roi-calc/static/css/main.0af10d06.chunk.css",
+    "main.css": "/roi-calc/static/css/main.fbf8900b.chunk.css",
     "main.js": "/roi-calc/static/js/main.83540dbe.chunk.js",
     "main.js.map": "/roi-calc/static/js/main.83540dbe.chunk.js.map",
     "runtime-main.js": "/roi-calc/static/js/runtime-main.e6be1827.js",
@@ -8,9 +8,9 @@
     "static/js/2.6a872b8a.chunk.js": "/roi-calc/static/js/2.6a872b8a.chunk.js",
     "static/js/2.6a872b8a.chunk.js.map": "/roi-calc/static/js/2.6a872b8a.chunk.js.map",
     "index.html": "/roi-calc/index.html",
-    "precache-manifest.07b45b8dd5a961f2675a33fcda3b309b.js": "/roi-calc/precache-manifest.07b45b8dd5a961f2675a33fcda3b309b.js",
+    "precache-manifest.024e81449f677849352db1441b55a1c1.js": "/roi-calc/precache-manifest.024e81449f677849352db1441b55a1c1.js",
     "service-worker.js": "/roi-calc/service-worker.js",
-    "static/css/main.0af10d06.chunk.css.map": "/roi-calc/static/css/main.0af10d06.chunk.css.map",
+    "static/css/main.fbf8900b.chunk.css.map": "/roi-calc/static/css/main.fbf8900b.chunk.css.map",
     "static/js/2.6a872b8a.chunk.js.LICENSE.txt": "/roi-calc/static/js/2.6a872b8a.chunk.js.LICENSE.txt",
     "static/media/calc.svg": "/roi-calc/static/media/calc.8643f387.svg",
     "static/media/fb.svg": "/roi-calc/static/media/fb.75455e39.svg",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.e6be1827.js",
     "static/js/2.6a872b8a.chunk.js",
-    "static/css/main.0af10d06.chunk.css",
+    "static/css/main.fbf8900b.chunk.css",
     "static/js/main.83540dbe.chunk.js"
   ]
 }
