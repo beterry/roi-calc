@@ -1,68 +1,25 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Designing an Automotive Direct Mail ROI Calculator
 
-## Available Scripts
+How I planned, designed, and prototyped a sales tool to help customer's discover the hidden benefits of direct mail.
 
-In the project directory, you can run:
+[Deployed code](https://beterry.github.io/roi-calc/)
 
-### `npm start`
+[Full blog post](https://benterry.dev/work/roi-calc/)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## About this project
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Mail Shark is an industry leading direct mail and marketing company. The sales team at Mail Shark often uses return on investment calculations to explain why direct mail is a great marketing tool. This calculation not only takes into account the customer’s average sale and mailing quantity, but also retention rates and referrals. This extra calculation is effective at convincing customers to enroll in a mailing campaign.
 
-### `npm test`
+Previously, this ROI calculation was done behind the scenes with a private spreadsheet, providing very little transparency to customers. In an effort to make this sales tool more accessible, I was tasked to create an online version of the ROI calculator targeted towards automotive shop owners.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Planning
 
-### `npm run build`
+### Stakeholder meeting
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The stakeholder meeting involved the Regional Vice President of Sales, the Vice President of Marketing, the Creative Director and myself. The purpose of this meeting was to discuss the goals, features, and tone of the project.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+#### Goals
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1. Allow the user to effortlessly calculate their potential direct mail ROI
+2. Educate the user about the unseen, substantial long-term benefits of direct mail
+3. Collect the user’s contact information for follow-up calls
